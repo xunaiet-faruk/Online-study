@@ -83,13 +83,10 @@ const Navbar = () => {
                         <li><button onClick={handlelogout}>logout</button></li>
                      
                     </ul>
-                </div> : <Link to={'/login'}><button className="btn">Login</button></Link>
+                </div> : <Link to={'/login'}><button className="btn mr-5">Login</button></Link>
              
-           
-            
             }
-            
-                
+                  
 
             </div>
         </div>

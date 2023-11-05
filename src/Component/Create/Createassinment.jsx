@@ -2,10 +2,13 @@ import { useContext, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker" 
 import { Authcontext } from "../../Auth/Authprovider";
+import Swal from "sweetalert2";
+import Useaxios from "../../Auth/Useaxios";
 const Createassinment = () => {
          const {user} =useContext(Authcontext)
   
         const [startDate, setStartDate] = useState(new Date());
+        const axios =Useaxios()
 
         const handlesubmit = e =>{
             e.preventDefault()
@@ -16,7 +19,22 @@ const Createassinment = () => {
             const difficult = e.target.difficult.value;
             const description = e.target.description.value;
             const Alldata ={title,marks,image,datepiker,difficult,description}
-            console.log(Alldata)
+           
+            axios.post('/create',Alldata)
+            .then(res => {
+                if(res.data?.insertedId){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+            .catch(error => {
+                console.log(error)
+            })
 
         }
 

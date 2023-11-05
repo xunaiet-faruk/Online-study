@@ -1,0 +1,122 @@
+[    
+    {
+        "title": "Introduction to Programming",
+        "marks": 60,
+        "image": "https://i.ibb.co/nswjJJx/image.png",
+        "difficulty": "easy"
+    },
+    {
+        "title": "Web Development Basics",
+        "marks": 90,
+        "image": "https://i.ibb.co/s3ZC5W1/image.png",
+        "difficulty": "easy"
+    },
+    {
+        "title": "Data Structures and Algorithms",
+        "marks": 95,
+        "image": "https://i.ibb.co/Lk14FNf/image.png",
+        "difficulty": "easy"
+    },
+    {
+        "title": "Introduction to Machine Learning",
+        "marks": 100,
+        "image": "https://i.ibb.co/bJSjkXt/image.png",
+        "difficulty": "easy"
+    },
+    {
+        "title": "Mobile App Development",
+        "marks": 90,
+        "image": "https://i.ibb.co/FqYNBwY/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Database Management Systems",
+        "marks": 80,
+        "image": "https://i.ibb.co/pLMMQJs/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Network Security Fundamentals",
+        "marks": 96,
+        "image": "https://i.ibb.co/Vgf3vNJ/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Artificial Intelligence and Robotics",
+        "marks": 95,
+        "image": "https://i.ibb.co/DRdVMzL/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Digital Marketing Strategies",
+        "marks": 80,
+        "image": "https://i.ibb.co/M2SXtsf/image.png",
+        "difficulty": "hard"
+    },
+    {
+        "title": "Financial Management Principles",
+        "marks": 90,
+        "image": "https://example.com/finance.jpg",
+        "difficulty": "hard"
+    },
+    {
+        "title": "Creative Writing Techniques",
+        "marks": 100,
+        "image": "https://i.ibb.co/6w1LmHJ/image.png",
+        "difficulty": "hard"
+    },
+    {
+        "title": "Photography Fundamentals",
+        "marks": 83,
+        "image": "https://i.ibb.co/VNNRqyB/image.png",
+        "difficulty": "hard"
+    },
+    {
+        "title": "Introduction to Psychology",
+        "marks": 85,
+        "image": "https://i.ibb.co/nPk5j5s/image.png",
+        "difficulty": "Beginner"
+    },
+    {
+        "title": "Environmental Science and Sustainability",
+        "marks": 100,
+        "image": "https://i.ibb.co/kgNCqCM/image.png",
+        "difficulty": "easy"
+    },
+    {
+        "title": "Human Anatomy and Physiology",
+        "marks": 100,
+        "image": "https://i.ibb.co/Pj01HZd/image.png",
+        "difficulty": "easy"
+    },
+    {
+        "title": "History of Art and Architecture",
+        "marks": 80,
+        "image": "https://i.ibb.co/k9PmtDT/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Business Ethics and Corporate Governance",
+        "marks": 90,
+        "image": "https://i.ibb.co/cDb13k0/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Introduction to Astrophysics",
+        "marks": 92,
+        "image": "https://i.ibb.co/s9jHbsf/image.png",
+        "difficulty": "medium"
+    },
+    {
+        "title": "Digital Illustration and Graphic Design",
+        "marks": 85,
+        "image": "https://i.ibb.co/j3Lkk1j/image.png",
+        "difficulty": "hard"
+    },
+    {
+        "title": "Public Speaking and Communication Skills",
+        "marks": 90,
+        "image": "https://example.com/publicspeaking.jpg",
+        "difficulty": "hard"
+    }
+]

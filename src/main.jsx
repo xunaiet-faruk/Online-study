@@ -13,6 +13,12 @@ import Authprovider from './Auth/Authprovider';
 import Assinment from './Component/Assinment/Assinment';
 import Createassinment from './Component/Create/Createassinment';
 import Privateroute from './Firebase/Privateroute';
+import {
+  QueryClient,
+  QueryClientProvider,
+
+} from '@tanstack/react-query'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,17 +43,21 @@ const router = createBrowserRouter([
       {
         path:'/create',
         element: <Privateroute><Createassinment></Createassinment></Privateroute>
-      }
+      },
+      
     ]
   },
 ]);
 
+const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   
-     <Authprovider>
-      <RouterProvider router={router} />
-     </Authprovider>
+    <QueryClientProvider client={queryClient}>
+      <Authprovider>
+        <RouterProvider router={router} />
+      </Authprovider>
 
+    </QueryClientProvider>
   </React.StrictMode>,
 )
