@@ -37,7 +37,7 @@ const Faq = () => {
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4" checked="checked" />
                         <div className="collapse-title text-xl font-medium">
-                            : Is there a minimum or maximum commitment required for participating in study groups
+                            Is there a minimum or maximum commitment required for participating in study groups
                         </div>
                         <div className="collapse-content">
                             <p>There is no strict commitment requirement. However, we encourage active participation and respectful engagement within the study groups. Each group may have its own guidelines, so be sure to review the group rules upon joining.</p>

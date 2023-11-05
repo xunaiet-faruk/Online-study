@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Auth/Authprovider";
 import Swal from "sweetalert2";
 import { FcGoogle } from 'react-icons/fc';
@@ -12,8 +12,8 @@ const Login = () => {
     const [see, setsee] = useState(false);
     const { signin, Googlesign } = useContext(Authcontext);
 
-    // const location = useLocation();
-    // const navigate = useNavigate()
+    const location = useLocation();
+    const navigate = useNavigate()
 
     const handlesubmit = e =>{
         e.preventDefault()
@@ -30,7 +30,7 @@ const Login = () => {
                 })
 
                 console.log(res.user)
-                // navigate(location?.state ? location.state : '/')
+                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)
@@ -40,7 +40,7 @@ const Login = () => {
     const handlegoogle = () => {
         Googlesign()
             .then(() => {
-                // navigate(location?.state ? location.state : '/')
+                 navigate(location?.state ? location.state : '/')
 
             })
             .catch(error => {

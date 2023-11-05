@@ -10,6 +10,9 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import Authprovider from './Auth/Authprovider';
+import Assinment from './Component/Assinment/Assinment';
+import Createassinment from './Component/Create/Createassinment';
+import Privateroute from './Firebase/Privateroute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'/assignments',
+        element:<Assinment></Assinment>
+      },
+      {
+        path:'/create',
+        element: <Privateroute><Createassinment></Createassinment></Privateroute>
       }
     ]
   },
