@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 
 const Allassinments = ({ item }) => {
     console.log(item)
 
-    const { title, marks, image,
+    const {_id, title, marks, image,
         difficulty } =item;
 
 
@@ -25,7 +26,11 @@ const Allassinments = ({ item }) => {
                         Difficulte : {difficulty}
                     </p>
                    <div className="space-y-4">
-                        <button className="btn  btn-outline btn-secondary mr-3 ">view</button>
+
+                        <Link to={`/details/${_id}`}>
+                            <button className="btn btn-outline btn-secondary mr-3 ">view</button>
+
+                        </Link>
                         <button className="btn  btn-outline btn-primary">Update</button>
                    </div>
                 </div>
