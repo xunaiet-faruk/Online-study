@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Authcontext } from "../../Auth/Authprovider";
-import Swal from "sweetalert2";
-import Submit from "../../Submitassinments.jsx/Submit";
 import Useaxios from "../../Auth/Useaxios";
 import toast from "react-hot-toast";
 
@@ -16,6 +14,7 @@ const Deatils = () => {
     const axios =Useaxios()
     const loderdata =useLoaderData()
     const { image, title, marks, description } =loderdata
+    console.log(description)
   
     const hadleform = e =>{
         e.preventDefault();
@@ -57,8 +56,7 @@ const Deatils = () => {
                                 </label>
                                 <textarea name="" placeholder="textarea" id="" cols="10" rows="5" className="w-full mt-5 bg-gray-100 border-2"></textarea>
                                 <div>
-
-                                    <input type="submit" name="description" className="btn btn-primary w-full mt-2" value="Submit" />
+                                 <input type="submit" name="description" className="btn btn-primary w-full mt-2" value="Submit" />
                                 </div>
                             </form>
                             </div>

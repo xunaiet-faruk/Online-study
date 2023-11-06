@@ -2,8 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import Assinmnettable from "../Component/Assinmenttable/Assinmnettable";
 
 
+
 const Submit = () => {
     const Assinment =useLoaderData()
+   
     return (
         <div>
             <div className="overflow-x-auto">
@@ -16,6 +18,7 @@ const Submit = () => {
                             <th>Email</th>
                             <th>Status</th>
                             <th>Feedback </th>
+                            <th>Delete </th>
                         </tr>
                     </thead>
                     <tbody>

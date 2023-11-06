@@ -22,6 +22,8 @@ import Deatils from './Component/Viewdeatils/Deatils';
 import Update from './Component/Update/Update';
 import Submit from './Submitassinments.jsx/Submit';
 import { Toaster } from 'react-hot-toast';
+import Feedback from './Submitassinments.jsx/Feedback';
+import Myassinments from './Component/Myassinmnet/Myassinments';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +66,15 @@ const router = createBrowserRouter([
         element: <Privateroute><Submit></Submit></Privateroute>,
         loader: () => fetch('http://localhost:5000/fromassinmetns')
      
+      },
+      {
+        path:'/fromassinmetns/:id',
+        element:<Privateroute><Feedback></Feedback></Privateroute>,
+        loader: () => fetch('http://localhost:5000/fromassinmetns')
+      },
+      {
+        path:'/myassinment',
+        element: <Privateroute><Myassinments></Myassinments></Privateroute>
       }
       
     ]

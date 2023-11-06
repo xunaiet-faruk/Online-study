@@ -50,7 +50,7 @@ const Login = () => {
 
     return (
         <div>  
-            <div className="card flex-shrink-0 lg:w-[500px] w-[350px] md:w-[500px] shadow-2xl bg-base-100 max-w-screen-7xl mx-auto  bg-gradient-to-r from-purple-200 to-black">
+            <div className="card flex-shrink-0 lg:w-[500px] w-[350px] md:w-[500px] mb-12 shadow-2xl bg-base-100 max-w-screen-7xl mx-auto  bg-gradient-to-r from-purple-300 to-gray-400">
                 <h1 className="text-white  bg-gradient-to-r from-gray-400 to-pink-300 p-7 rounded-t-lg text-center font-bold text-2xl">LOGIN HERE... </h1>
                         <form onSubmit={handlesubmit} className="card-body">
                             <div className="form-control">

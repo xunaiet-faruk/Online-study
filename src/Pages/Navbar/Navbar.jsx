@@ -81,6 +81,14 @@ const Navbar = () => {
                     <label tabIndex={0} className="btn btn-ghost rounded-btn"><img className="w-[80px] rounded-full" src={user.photoURL } alt="" /></label>
                     <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
                         <li><button onClick={handlelogout}>logout</button></li>
+                        <li><NavLink
+                            to="/myassinment"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            My Assignments
+                        </NavLink></li>
                      
                     </ul>
                 </div> : <Link to={'/login'}><button className="btn mr-5">Login</button></Link>
