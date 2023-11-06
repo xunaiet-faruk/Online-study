@@ -19,6 +19,7 @@ import {
 
 } from '@tanstack/react-query'
 import Deatils from './Component/Viewdeatils/Deatils';
+import Update from './Component/Update/Update';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
         path:'/details/:id',
         element:<Privateroute><Deatils></Deatils></Privateroute>,
         loader: ({ params }) => fetch(`http://localhost:5000/create/${params.id}`)
+      },
+      {
+        path:'/update/:id',
+        element:<Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/create/${params.id}`)
+
       }
       
     ]

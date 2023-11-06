@@ -31,7 +31,14 @@ const Allassinments = ({ item }) => {
                             <button className="btn btn-outline btn-secondary mr-3 ">view</button>
 
                         </Link>
-                        <button className="btn  btn-outline btn-primary">Update</button>
+
+                <Link to={`/update/${_id}`}>
+                
+                            <button className="btn  btn-outline btn-primary">Update</button>
+
+                
+                </Link>
+
                    </div>
                 </div>
                 <div className="flex justify-center p-6 pt-2 gap-7">

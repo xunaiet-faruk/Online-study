@@ -1,122 +1,142 @@
-[    
+[
     {
         "title": "Introduction to Programming",
         "marks": 60,
         "image": "https://i.ibb.co/nswjJJx/image.png",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "description": "Learn the basics of programming, including variables, loops, and functions."
     },
     {
         "title": "Web Development Basics",
         "marks": 90,
         "image": "https://i.ibb.co/s3ZC5W1/image.png",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "description": "Explore the fundamental concepts of web development, HTML, CSS, and JavaScript."
     },
     {
         "title": "Data Structures and Algorithms",
         "marks": 95,
         "image": "https://i.ibb.co/Lk14FNf/image.png",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "description": "Master data structures like arrays and linked lists, and algorithms for problem-solving."
     },
     {
         "title": "Introduction to Machine Learning",
         "marks": 100,
         "image": "https://i.ibb.co/bJSjkXt/image.png",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "description": "Explore the basics of machine learning and its applications in real-world scenarios."
     },
     {
         "title": "Mobile App Development",
         "marks": 90,
         "image": "https://i.ibb.co/FqYNBwY/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Develop mobile applications for various platforms, focusing on user experience and functionality."
     },
     {
         "title": "Database Management Systems",
         "marks": 80,
         "image": "https://i.ibb.co/pLMMQJs/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Learn about database design, implementation, and management for efficient data storage and retrieval."
     },
     {
         "title": "Network Security Fundamentals",
         "marks": 96,
         "image": "https://i.ibb.co/Vgf3vNJ/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Explore the principles of network security, cryptography, and secure communication protocols."
     },
     {
         "title": "Artificial Intelligence and Robotics",
         "marks": 95,
         "image": "https://i.ibb.co/DRdVMzL/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Dive into the world of AI and robotics, understanding algorithms, neural networks, and autonomous systems."
     },
     {
         "title": "Digital Marketing Strategies",
         "marks": 80,
         "image": "https://i.ibb.co/M2SXtsf/image.png",
-        "difficulty": "hard"
+        "difficulty": "hard",
+        "description": "Develop advanced digital marketing skills, including SEO, social media, and online advertising."
     },
     {
         "title": "Financial Management Principles",
         "marks": 90,
         "image": "https://example.com/finance.jpg",
-        "difficulty": "hard"
+        "difficulty": "hard",
+        "description": "Explore financial planning, investment strategies, and corporate financial management."
     },
     {
         "title": "Creative Writing Techniques",
         "marks": 100,
         "image": "https://i.ibb.co/6w1LmHJ/image.png",
-        "difficulty": "hard"
+        "difficulty": "hard",
+        "description": "Hone your creative writing skills, focusing on storytelling, character development, and literary techniques."
     },
     {
         "title": "Photography Fundamentals",
         "marks": 83,
         "image": "https://i.ibb.co/VNNRqyB/image.png",
-        "difficulty": "hard"
+        "difficulty": "hard",
+        "description": "Learn photography basics, including composition, lighting, and image editing."
     },
     {
         "title": "Introduction to Psychology",
         "marks": 85,
         "image": "https://i.ibb.co/nPk5j5s/image.png",
-        "difficulty": "Beginner"
+        "difficulty": "Beginner",
+        "description": "Explore the fundamentals of psychology, including human behavior, cognition, and mental processes."
     },
     {
         "title": "Environmental Science and Sustainability",
         "marks": 100,
         "image": "https://i.ibb.co/kgNCqCM/image.png",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "description": "Study environmental issues, conservation, and sustainable practices for a greener planet."
     },
     {
         "title": "Human Anatomy and Physiology",
         "marks": 100,
         "image": "https://i.ibb.co/Pj01HZd/image.png",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "description": "Explore the structure and function of the human body, covering anatomy and physiological processes."
     },
     {
         "title": "History of Art and Architecture",
         "marks": 80,
         "image": "https://i.ibb.co/k9PmtDT/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Discover art movements, architectural styles, and influential artists throughout history."
     },
     {
         "title": "Business Ethics and Corporate Governance",
         "marks": 90,
         "image": "https://i.ibb.co/cDb13k0/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Explore ethical decision-making in business, corporate social responsibility, and governance principles."
     },
     {
         "title": "Introduction to Astrophysics",
         "marks": 92,
         "image": "https://i.ibb.co/s9jHbsf/image.png",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "description": "Delve into the study of celestial objects, space phenomena, and astrophysical theories."
     },
     {
         "title": "Digital Illustration and Graphic Design",
         "marks": 85,
         "image": "https://i.ibb.co/j3Lkk1j/image.png",
-        "difficulty": "hard"
+        "difficulty": "hard",
+        "description": "Develop advanced skills in digital illustration, graphic design, and creative expression."
     },
     {
         "title": "Public Speaking and Communication Skills",
         "marks": 90,
         "image": "https://example.com/publicspeaking.jpg",
-        "difficulty": "hard"
+        "difficulty": "hard",
+        "description": "Enhance your public speaking abilities, communication techniques, and persuasive skills."
     }
 ]
