@@ -45,6 +45,10 @@ const Assinmnettable = ({ card }) => {
                       <input className="border-2 w-full p-3 bg-blue-50" type="text" placeholder="Give Mark" name="" id="" />
                        <textarea name="" placeholder="Give your feedback" className="w-full border-2 mt-5 bg-blue-50" id="" cols="30" rows="5"></textarea> 
 
+                        <div className="flex justify-center items-center mt-4">
+                            <input className="btn btn-secondary w-full" type="submit" value="Submit" />
+
+                            </div>
                     </div>
                 </dialog>
             </th>
