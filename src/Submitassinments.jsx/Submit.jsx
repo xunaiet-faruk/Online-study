@@ -1,12 +1,36 @@
 import { useLoaderData } from "react-router-dom";
+import Assinmnettable from "../Component/Assinmenttable/Assinmnettable";
 
-const Submit = ({cards}) => {
-   console.log(cards)
-   const data =useLoaderData()
-   console.log(data)
+
+const Submit = () => {
+    const Assinment =useLoaderData()
     return (
         <div>
-            hellow
+            <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead className="bg-gray-100">
+                        <tr>
+                            
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Feedback </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {/* row 1 */}
+                  
+                 {
+                            Assinment.map((card,idx)=><Assinmnettable key={idx} card={card}></Assinmnettable>)
+                 }
+                    
+                     
+                    </tbody>
+                    
+
+                </table>
+            </div>
             
         </div>
     );

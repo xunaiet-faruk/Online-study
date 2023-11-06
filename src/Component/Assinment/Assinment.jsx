@@ -31,10 +31,19 @@ const pages =[...new Array(totalcont).fill(0)]
         return <p>Erro : {error.message}</p>
     }
 
+    const handleOption = () =>{
+        
+    }
+
+
     return (
        <div>
             <h1 className="text-5xl font-bold italic  text-center">All <span className="text-red-500">Assinmnets</span> Here</h1>
-           
+            <select name="" id="" onChange={handleOption} className="px-10 py-2 bg-gray-200 rounded-lg">
+                <option value="easy">easy</option>
+                <option value="hard">hard</option>
+                <option value="medium">medium</option>
+            </select>
             <div className="grid lg:grid-cols-3 p-5 md:grid-cols-2 grid-cols-1 gap-12 max-w-screen-7xl mx-auto">
                 {
                   result?.data?.result?.map((item, idx) => <Allassinments key={idx} item={item}>

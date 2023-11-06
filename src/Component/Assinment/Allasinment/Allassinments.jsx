@@ -1,18 +1,19 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
-
+<select name="" id="">
+    <option value="easy">easy</option>
+    <option value="hard">hard</option>
+    <option value="medium">medium</option>
+</select>
 const Allassinments = ({ item }) => {
-
-
 
     const {_id, title, marks, image,
         difficulty } =item;
-
-
     return (
      
         <div>
+            
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md h-[450px] rounded-xl bg-clip-border">
                 <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                     <img className="w-full h-[200px]" src={image} alt="profile-picture" />
@@ -36,9 +37,7 @@ const Allassinments = ({ item }) => {
 
                 <Link to={`/update/${_id}`}>
                 
-                            <button className="btn  btn-outline btn-primary">Update</button>
-
-                
+                            <button className="btn  btn-outline btn-primary">Update</button>            
                 </Link>
 
                    </div>

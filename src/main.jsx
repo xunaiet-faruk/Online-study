@@ -21,6 +21,7 @@ import {
 import Deatils from './Component/Viewdeatils/Deatils';
 import Update from './Component/Update/Update';
 import Submit from './Submitassinments.jsx/Submit';
+import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -60,8 +61,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/submitted',
-        element:<Submit></Submit>,
-        
+        element: <Privateroute><Submit></Submit></Privateroute>,
+        loader: () => fetch('http://localhost:5000/fromassinmetns')
      
       }
       
@@ -77,7 +78,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Authprovider>
         <RouterProvider router={router} />
       </Authprovider>
-
+  
     </QueryClientProvider>
+    <Toaster></Toaster>
   </React.StrictMode>,
 )
