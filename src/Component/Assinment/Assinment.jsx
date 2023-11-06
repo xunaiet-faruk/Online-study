@@ -1,21 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
 import Useaxios from "../../Auth/Useaxios";
 import Allassinments from "./Allasinment/Allassinments";
+import { useState } from "react";
 
 
 const Assinment = () => {
+    const [page, setpage] = useState(0)
     const axios =Useaxios()
 
     const Allasinment = async() =>{
-        const result = await axios.get('/create')
+        const result = await axios.get(`/create?page=${page}`)
         return result;
 
     }
-    const { data:assinments ,isError,error, isLoading } =useQuery({
-        queryKey: ['Allasinments'],
-        queryFn:Allasinment
+    const { data: result,  postCount ,isError,error, isLoading } =useQuery({
+        queryKey: ['Allasinments',page],
+        queryFn:Allasinment,
+        initialData:{result:[],}
     })
-    console.log(assinments?.data)
+ 
+    const totalcont = Math.ceil(result?.data?.postCount ? result?.data?.postCount / 5 : 0)
+console.log(totalcont)
+const pages =[...new Array(totalcont).fill(0)]
     
     if(isLoading){
         return <progress className="progress w-56"></progress>
@@ -31,10 +37,17 @@ const Assinment = () => {
            
             <div className="grid lg:grid-cols-3 p-5 md:grid-cols-2 grid-cols-1 gap-12 max-w-screen-7xl mx-auto">
                 {
-                    assinments?.data?.map((item, idx) => <Allassinments key={idx} item={item}>
+                  result?.data?.result?.map((item, idx) => <Allassinments key={idx} item={item}>
 
                     </Allassinments>)
                 }
+            </div>
+            <div className="text-center flex gap-10 justify-center ">
+                {
+                    pages.map((item, index) => <button key={index} className={`w-5 mt-12 mb-12 h-5 ${page === index ? " bg-orange-300 text-white" : "text - white" }  rounded-full`} onClick={() => setpage(index)}>{index + 1}</button>
+)
+                }
+            
             </div>
        </div>
     );

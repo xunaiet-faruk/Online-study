@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 const Allassinments = ({ item }) => {
-    console.log(item)
+
+
 
     const {_id, title, marks, image,
         difficulty } =item;

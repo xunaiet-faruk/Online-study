@@ -20,6 +20,7 @@ import {
 } from '@tanstack/react-query'
 import Deatils from './Component/Viewdeatils/Deatils';
 import Update from './Component/Update/Update';
+import Submit from './Submitassinments.jsx/Submit';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,12 @@ const router = createBrowserRouter([
         element:<Update></Update>,
         loader: ({ params }) => fetch(`http://localhost:5000/create/${params.id}`)
 
+      },
+      {
+        path:'/submitted',
+        element:<Submit></Submit>,
+        
+     
       }
       
     ]
