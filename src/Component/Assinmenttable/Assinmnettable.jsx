@@ -30,7 +30,7 @@ const Assinmnettable = ({ card,handledelete }) => {
             </td>
             <td>Pending</td>
             <th>
-                <Link to={`/fromassinmetns/${_id}`}><button>Give marks</button></Link>
+                <Link to={`/fromassinmetns/${_id}`}><button className="text-blue-400">Give marks</button></Link>
                
        
             </th>

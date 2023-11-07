@@ -4,23 +4,44 @@ import Allassinments from "./Allasinment/Allassinments";
 import { useState } from "react";
 
 
+
 const Assinment = () => {
+    // const allData =useLoaderData()
+    // const [assinmentdata,setAssinmnet] =useState(allData)
     const [page, setpage] = useState(0)
+    // const [dificult,setdificult] =useState("all")
+
     const axios =Useaxios()
+    
 
     const Allasinment = async() =>{
         const result = await axios.get(`/create?page=${page}`)
         return result;
+        
 
     }
+
     const { data: result,  postCount ,isError,error, isLoading } =useQuery({
         queryKey: ['Allasinments',page],
         queryFn:Allasinment,
         initialData:{result:[],}
     })
+    
+
+    // useEffect(() => {
+    //     if (dificult == "all") {
+    //         setAssinmnet(allData);
+    //     }
+    //     else {
+    //         const levels = allData.filter(level => level.difficulty === dificult);
+    //         console.log(levels, dificult);
+    //         setAssinmnet(levels)
+    //     }
+    // }, [allData,dificult])
+
  
     const totalcont = Math.ceil(result?.data?.postCount ? result?.data?.postCount / 5 : 0)
-console.log(totalcont)
+   
 const pages =[...new Array(totalcont).fill(0)]
     
     if(isLoading){
@@ -30,16 +51,24 @@ const pages =[...new Array(totalcont).fill(0)]
     if(isError){
         return <p>Erro : {error.message}</p>
     }
+    
+    
 
-    const handleOption = () =>{
+    // const handleOption = e =>{
+    //     setdificult(e.target.value)
         
-    }
+    
+        
+    // }
+
+
 
 
     return (
        <div>
-            <h1 className="text-5xl font-bold italic  text-center">All <span className="text-red-500">Assinmnets</span> Here</h1>
-            <select name="" id="" onChange={handleOption} className="px-10 py-2 bg-gray-200 rounded-lg">
+            <h1 className="text-5xl font-bold italic mt-8 text-center">All <span className="text-red-500">Assinmnets</span> Here</h1>
+            <select name="" id=""  className="px-10 py-2 bg-gray-200 rounded-lg">
+                <option value="all">All</option>
                 <option value="easy">easy</option>
                 <option value="hard">hard</option>
                 <option value="medium">medium</option>
@@ -53,8 +82,8 @@ const pages =[...new Array(totalcont).fill(0)]
             </div>
             <div className="text-center flex gap-10 justify-center ">
                 {
-                    pages.map((item, index) => <button key={index} className={`w-5 mt-12 mb-12 h-5 ${page === index ? " bg-orange-300 text-white" : "text - white" }  rounded-full`} onClick={() => setpage(index)}>{index + 1}</button>
-)
+                    pages.map((item, index) => <button key={index} className={`w-8  mt-12 mb-12 h-8 ${page === index ? " bg-orange-300 text-white" : "text - white" }  rounded-full`} onClick={() => setpage(index)}>{index + 1}</button>
+                )
                 }
             
             </div>

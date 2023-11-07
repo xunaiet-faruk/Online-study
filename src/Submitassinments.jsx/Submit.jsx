@@ -23,7 +23,7 @@ const Submit = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/fromassinmetns/${id}`, {
+                fetch(`http://localhost:5000/fromassinmetns/${id}`,{
                     method: 'DELETE',
                     headers:{
                         'Content-type': 'application/json'
@@ -38,7 +38,7 @@ const Submit = () => {
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
                                 icon: "success"
-                            });
+                            })
                             const remaing =submited.filter(assinmnets => assinmnets._id !== id)
                             setSubmited(remaing)
                         }
@@ -55,7 +55,7 @@ const Submit = () => {
                         <tr>
                             
                             <th>Name</th>
-                            <th>Email</th>
+                            <th>Email&name</th>
                             <th>Status</th>
                             <th>Feedback </th>
                             <th>Delete </th>
@@ -65,7 +65,7 @@ const Submit = () => {
                         {/* row 1 */}
                   
                  {
-                            submited.map((card,idx)=><Assinmnettable key={idx} handledelete={handledelete} card={card}></Assinmnettable>)
+                            submited?.length > 0 && submited?.map((card,idx)=><Assinmnettable key={idx} handledelete={handledelete} card={card}></Assinmnettable>)
                  }
                     
                      

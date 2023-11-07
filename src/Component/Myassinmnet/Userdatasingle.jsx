@@ -26,7 +26,7 @@ const Userdatasingle = ({ item }) => {
                 <br />
                 <span className="badge badge-ghost badge-sm">obtain marks {obtainmarks}</span>
             </td>
-            <td><p>{status ? status : 'pending'}</p></td>
+            <td><p className="text-red-500">{status ? status : 'pending'}</p></td>
             <th>
 
         <td>{details}</td>

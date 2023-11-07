@@ -1,19 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Authcontext } from "../../Auth/Authprovider";
 import Useaxios from "../../Auth/Useaxios";
 import toast from "react-hot-toast";
-import { pdfjs } from 'react-pdf';
-import Pdf from "../Pdf/Pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.js',
-    import.meta.url,
-).toString();
-
 
 const Deatils = () => {
-    const [pdfile,setpdffile] =useState(null)
     const { user } = useContext(Authcontext)
     const useremail =user?.email;
     const userName =user?.displayName
@@ -26,8 +17,8 @@ const Deatils = () => {
     const hadleform = e =>{
         e.preventDefault();
         const pdf = e.target.pdf.value;
-        const description = e.target.description.value;
-        const Allmoadaldata = { pdf, description, title, marks, image, useremail, userName }
+        const note = e.target.note.value;
+        const Allmoadaldata = { pdf, note, title, marks, image, useremail, userName }
         console.log(Allmoadaldata)
         axios.post('/fromassinmetns',Allmoadaldata)
         .then(res => {
@@ -84,12 +75,9 @@ const Deatils = () => {
                                 <label className="input-group">
                                     <input type="links" placeholder="pdf file" name="pdf" className="input mt-5 bg-gray-100 input-bordered w-full" />
                                 </label>
-                                <textarea name="" placeholder="textarea" id="" cols="10" rows="5" className="w-full mt-5 bg-gray-100 border-2"></textarea>
+                                <textarea name="note" placeholder="textarea" id="" cols="10" rows="5" className="w-full mt-5 bg-gray-100 border-2"></textarea>
                                 <div>
                                  <input type="submit" name="description" className="btn btn-primary w-full mt-2" value="Submit" />
-                                </div>
-                                <div>
-                                    <Pdf></Pdf>
                                 </div>
                             </form>
                             </div>

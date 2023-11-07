@@ -46,7 +46,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/assignments',
-        element:<Assinment></Assinment>
+        element:<Assinment></Assinment>,
+         loader: () => fetch('http://localhost:5000/create')
       },
       {
         path:'/create',
@@ -66,13 +67,13 @@ const router = createBrowserRouter([
       {
         path:'/submitted',
         element: <Privateroute><Submit></Submit></Privateroute>,
-        loader: () => fetch('http://localhost:5000/fromassinmetns')
+        loader: () => fetch('http://localhost:5000/fromassinmetns',{credentials:'include'})
      
       },
       {
         path:'/fromassinmetns/:id',
         element:<Privateroute><Feedback></Feedback></Privateroute>,
-        loader: () => fetch('http://localhost:5000/fromassinmetns')
+        loader: ({params}) => fetch(`http://localhost:5000/fromassinmetns/${params.id}`)
       },
       {
         path:'/myassinment',
