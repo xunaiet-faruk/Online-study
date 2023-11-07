@@ -1,29 +1,18 @@
+
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const Assinmnettable = ({ card }) => {
-    console.log(card)
+const Assinmnettable = ({ card,handledelete }) => {
+
     const {  title, marks, image, useremail, userName,_id } =card;
+  
+
+       
+
+    
 
 
-    // const handlecompirm =e =>{
-    //     e.preventDefault()
-       
-    //     const marks=e.target.marks.value;
-    //     const details = e.target.details.value;
-    //     const submitfrom = { marks, details }
-    //     console.log(submitfrom)
-    //     fetch(`http://localhost:5000/fromassinmetns/${_id}`,{
-    //         method:'PATCH',
-    //         headers:{
-    //             'Content-type':'application/json'
-    //         },
-    //         body:JSON.stringify(submitfrom)
-    //     })
-    //     .then(res =>res.json())
-    //     .then(data => console.log(data))
-    // }
-       
 
     return (
         <tr>
@@ -57,7 +46,9 @@ const Assinmnettable = ({ card }) => {
        
             </th>
             <td>
-        <button className="btn rounded-full  ml-4 bg-error text-white w-9">X</button>
+                <button onClick={() => handledelete(_id)} className="btn btn-circle btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
 
             </td>
         </tr>

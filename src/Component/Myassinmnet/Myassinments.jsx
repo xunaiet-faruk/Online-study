@@ -29,9 +29,9 @@ const Myassinments = () => {
                                     </label>
                                 </th>
                                 <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
-                                <th></th>
+                                <th>Marks</th>
+                                <th>Status</th>
+                                <th>Fedback</th>
                             </tr>
                         </thead>
                         <tbody>

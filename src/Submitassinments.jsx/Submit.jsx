@@ -1,11 +1,45 @@
 import { useLoaderData } from "react-router-dom";
 import Assinmnettable from "../Component/Assinmenttable/Assinmnettable";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 
 
 const Submit = () => {
     const Assinment =useLoaderData()
-   
+    const [submited, setSubmited] = useState(Assinment)
+
+    const handledelete = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/fromassinmetns/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            const remaing =submited.filter(assinmnets => assinmnets._id !== id)
+                            setSubmited(remaing)
+                        }
+                    })
+            }
+        });
+    }
     return (
         <div>
             <div className="overflow-x-auto">
@@ -25,7 +59,7 @@ const Submit = () => {
                         {/* row 1 */}
                   
                  {
-                            Assinment.map((card,idx)=><Assinmnettable key={idx} card={card}></Assinmnettable>)
+                            submited.map((card,idx)=><Assinmnettable key={idx} handledelete={handledelete} card={card}></Assinmnettable>)
                  }
                     
                      
