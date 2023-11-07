@@ -1,12 +1,19 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Authcontext } from "../../Auth/Authprovider";
 import Useaxios from "../../Auth/Useaxios";
 import toast from "react-hot-toast";
+import { pdfjs } from 'react-pdf';
+import Pdf from "../Pdf/Pdf";
 
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.js',
+    import.meta.url,
+).toString();
 
 
 const Deatils = () => {
+    const [pdfile,setpdffile] =useState(null)
     const { user } = useContext(Authcontext)
     const useremail =user?.email;
     const userName =user?.displayName
@@ -31,13 +38,36 @@ const Deatils = () => {
     }
 
     return (
-       <div className="mb-10">
-            <div className="flex justify-center items-center">
-                <img className=" w-[853px]" src={image} alt="" />
+       <div className="mb-10 flex lg:flex-row flex-col justify-between items-center bg-gray-200 lg:h-[80vh] ">
+            <div className="flex justify-center items-center w-2/3">
+                <img className="w-full lg:h-[450px]" src={image} alt="" />
             </div>
-            <div className="bg-gray-300 w-2/3 mx-auto py-5">
-                <p className="text-center text-red-500 text-4xl font-bold">{title}</p>
+            <div className="space-y-6">
+                <p className="text-center text-black text-4xl font-bold">{title}</p>
+                
                 <p className="text-center text-xl font-semibold">{description}</p>
+                <div className="avatar-group -space-x-6 justify-center">
+                    <div className="avatar">
+                        <div className="w-12">
+                            <img src="https://i.ibb.co/bXHmpHF/image.png" />
+                        </div>
+                    </div>
+                    <div className="avatar">
+                        <div className="w-12">
+                            <img src="https://i.ibb.co/bXHmpHF/image.png" />
+                        </div>
+                    </div>
+                    <div className="avatar">
+                        <div className="w-12">
+                            <img src="https://i.ibb.co/bXHmpHF/image.png" />
+                        </div>
+                    </div>
+                    <div className="avatar">
+                        <div className="w-12">
+                            <img src="https://i.ibb.co/bXHmpHF/image.png" />
+                        </div>
+                    </div>
+                </div>
                 <p className="text-center text-3xl text-blue-300 font-bold">Assinments Marks = {marks}</p>
                 <div className="text-center mt-4"> 
                     
@@ -58,11 +88,14 @@ const Deatils = () => {
                                 <div>
                                  <input type="submit" name="description" className="btn btn-primary w-full mt-2" value="Submit" />
                                 </div>
+                                <div>
+                                    <Pdf></Pdf>
+                                </div>
                             </form>
                             </div>
                           
                     </dialog>
-                    
+                  
                     
                 </div>
             </div>

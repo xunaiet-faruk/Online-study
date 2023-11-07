@@ -1,13 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import Assinmnettable from "../Component/Assinmenttable/Assinmnettable";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
+import { Authcontext } from "../Auth/Authprovider";
 
 
 
 const Submit = () => {
     const Assinment =useLoaderData()
     const [submited, setSubmited] = useState(Assinment)
+    const {user} =useContext(Authcontext)
 
     const handledelete = id => {
         Swal.fire({
@@ -22,7 +24,11 @@ const Submit = () => {
             if (result.isConfirmed) {
 
                 fetch(`http://localhost:5000/fromassinmetns/${id}`, {
-                    method: 'DELETE'
+                    method: 'DELETE',
+                    headers:{
+                        'Content-type': 'application/json'
+                    },
+                    body:JSON.stringify({email : user?.email})
                 })
                     .then(res => res.json())
                     .then(data => {

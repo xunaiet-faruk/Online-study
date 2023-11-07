@@ -4,6 +4,7 @@ import { Authcontext } from "../../Auth/Authprovider";
 
 const Navbar = () => {
     const {user,logout } = useContext(Authcontext)
+    console.log(user)
   
     const links =<>
     
@@ -57,7 +58,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 shadow-xl rounded-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

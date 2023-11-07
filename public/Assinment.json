@@ -1,17 +1,17 @@
 [
     {
-        "title": "Introduction to Programming",
+        "title": "Virtual Science Fair",
         "marks": 60,
-        "image": "https://i.ibb.co/nswjJJx/image.png",
+        "image": "https://i.ibb.co/4Rd338d/image.png",
         "difficulty": "easy",
-        "description": "Learn the basics of programming, including variables, loops, and functions."
+        "description": "Collaborate on scientific experiments, create presentations, and showcase findings in a virtual science fair."
     },
     {
-        "title": "Web Development Basics",
+        "title": "Literary Analysis Circle",
         "marks": 90,
-        "image": "https://i.ibb.co/s3ZC5W1/image.png",
+        "image": "https://i.ibb.co/JjsR40H/image.png",
         "difficulty": "easy",
-        "description": "Explore the fundamental concepts of web development, HTML, CSS, and JavaScript."
+        "description": "Read and analyze classic literature together, discussing themes, characters, and literary devices"
     },
     {
         "title": "Data Structures and Algorithms",
@@ -21,18 +21,18 @@
         "description": "Master data structures like arrays and linked lists, and algorithms for problem-solving."
     },
     {
-        "title": "Introduction to Machine Learning",
+        "title": "Math Problem Solving Challenge",
         "marks": 100,
-        "image": "https://i.ibb.co/bJSjkXt/image.png",
+        "image": "https://i.ibb.co/6B6jrsZ/image.png",
         "difficulty": "easy",
-        "description": "Explore the basics of machine learning and its applications in real-world scenarios."
+        "description": "Solve complex math problems collaboratively, discuss strategies, and present solutions.."
     },
     {
-        "title": "Mobile App Development",
+        "title": "Historical Debate Series",
         "marks": 90,
-        "image": "https://i.ibb.co/FqYNBwY/image.png",
+        "image": "https://i.ibb.co/T4fLDXj/image.png",
         "difficulty": "medium",
-        "description": "Develop mobile applications for various platforms, focusing on user experience and functionality."
+        "description": "Research historical events and figures, engage in debates, and defend different perspectives"
     },
     {
         "title": "Database Management Systems",
@@ -119,9 +119,9 @@
         "description": "Explore ethical decision-making in business, corporate social responsibility, and governance principles."
     },
     {
-        "title": "Introduction to Astrophysics",
+        "title": "DIY (Do It Yourself) Project Expo",
         "marks": 92,
-        "image": "https://i.ibb.co/s9jHbsf/image.png",
+        "image": "https://i.ibb.co/rbBGnLT/image.png",
         "difficulty": "medium",
         "description": "Delve into the study of celestial objects, space phenomena, and astrophysical theories."
     },
@@ -138,5 +138,26 @@
         "image": "https://example.com/publicspeaking.jpg",
         "difficulty": "hard",
         "description": "Enhance your public speaking abilities, communication techniques, and persuasive skills."
+    },
+    {
+        "title": "Psychology and Mental Health Workshop",
+        "marks": 90,
+        "image": "https://example.com/publicspeaking.jpg",
+        "difficulty": "easy",
+        "description": "Discuss mental health topics, practice coping strategies, and organize mental health awareness events."
+    },
+    {
+        "title": "Digital Media Production",
+        "marks": 70,
+        "image": "https://i.ibb.co/qrSzH4K/image.png",
+        "difficulty": "hard",
+        "description": "Create podcasts, videos, or multimedia content collaboratively, exploring various topics and formatss events."
+    },
+    {
+        "title": "Coding and Game Development",
+        "marks": 70,
+        "image": "https://i.ibb.co/SfGjHpQ/image.png",
+        "difficulty": "hard",
+        "description": "Develop coding projects, create video games, and collaborate on game design and development."
     }
 ]

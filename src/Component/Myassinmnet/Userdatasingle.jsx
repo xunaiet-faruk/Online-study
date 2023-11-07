@@ -2,7 +2,7 @@
 
 const Userdatasingle = ({ item }) => {
     const { image, title, marks, obtainmarks, details, status } =item;
-    console.log(status)
+   
     
     return (
         <tr>

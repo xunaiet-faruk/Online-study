@@ -24,11 +24,13 @@ import Submit from './Submitassinments.jsx/Submit';
 import { Toaster } from 'react-hot-toast';
 import Feedback from './Submitassinments.jsx/Feedback';
 import Myassinments from './Component/Myassinmnet/Myassinments';
+import Error from './Error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Mainroute></Mainroute>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',

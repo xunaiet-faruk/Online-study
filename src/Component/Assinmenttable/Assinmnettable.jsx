@@ -1,19 +1,8 @@
 
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
-
-
 const Assinmnettable = ({ card,handledelete }) => {
 
     const {  title, marks, image, useremail, userName,_id } =card;
-  
-
-       
-
-    
-
-
-
     return (
         <tr>
            

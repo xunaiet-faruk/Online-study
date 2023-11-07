@@ -72,7 +72,7 @@ const Register = () => {
     return (
         <div>
 
-            <div className="card flex-shrink-0 lg:w-[600px] md:w-[550px] w-[400px] shadow-2xl bg-base-100 max-w-screen-7xl mx-auto  bg-gradient-to-r from-gray-500 to-blue-200">
+            <div className="card mt-12 flex-shrink-0 lg:w-[600px] mb-20 md:w-[550px] w-[400px] shadow-2xl bg-base-100 max-w-screen-7xl mx-auto  bg-gradient-to-r from-gray-500 to-blue-200">
                 <h1 className="text-white  bg-black p-7 rounded-t-lg text-center font-bold text-2xl">Register HERE... </h1>
                 <form onSubmit={handlesubmit} className="card-body">
                     <div className="form-control">
@@ -120,7 +120,7 @@ const Register = () => {
                     }
                 </div>
                 <div className="text-center">
-                    <button onClick={handlegoogle} className="btn btn-outline w-full rounded-b-xl boreder  text-md hover:bg-error mt-4 font-semibold">
+                    <button onClick={handlegoogle} className="btn btn-outline px-52 mb-2 rounded-b-xl boreder  text-md hover:bg-error mt-4 font-semibold">
                         <FcGoogle className="text-2xl ml-2"> </FcGoogle>   Google
                     </button>
                 </div>

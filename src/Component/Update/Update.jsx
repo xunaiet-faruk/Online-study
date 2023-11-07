@@ -24,11 +24,7 @@ const Update = () => {
         const Allupdatedata = { title, marks, image, datepiker, difficult, description }
         console.log(Allupdatedata)
 
-        // axios.patch(`/create/${_id}`)
-        // .then(res => {
-        //     console.log(res.data)
-        // })
-        // .catch(error => console.log(error))
+
         fetch(`http://localhost:5000/create/${_id}`,{
             method:'PATCH',
             headers:{
