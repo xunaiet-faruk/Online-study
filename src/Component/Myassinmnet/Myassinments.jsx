@@ -4,6 +4,7 @@ import Userdatasingle from "./Userdatasingle";
 
 const Myassinments = () => {
     const [myassinmnet, setAssinment] = useState([])
+    console.log(myassinmnet);
     const { user } = useContext(Authcontext)
 
     useEffect(() => {
