@@ -40,6 +40,14 @@ const Navbar = () => {
         >
             Submitted Assignments
         </NavLink></li>
+        <li><NavLink
+            to="/myassinment"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }
+        >
+            My Assignments
+        </NavLink></li>
     
     </>
     
@@ -77,22 +85,18 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end -mt-4">
-                { user?.email ? <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost rounded-btn"><img className="w-[80px] rounded-full" src={user.photoURL } alt="" /></label>
-                    <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                        <li><button onClick={handlelogout}>logout</button></li>
-                        <li><NavLink
-                            to="/myassinment"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
-                            My Assignments
-                        </NavLink></li>
-                     
-                    </ul>
-                </div> : <Link to={'/login'}><button className="btn mr-5">Login</button></Link>
+            <div className="navbar-end -mt-4 ml-28">
+                { user?.email ? <div className="flex justify-center items-center font-bold">
+                    <button className="btn btn-neutral" onClick={handlelogout}>logout</button>
+                    <div className="dropdown dropdown-hover">
+                        <label tabIndex={0} className="btn btn-ghost rounded-btn"><img className="w-[80px] rounded-full" src={user.photoURL} alt="" /></label>
+                        <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-blue-100 rounded-box w-28 mt-4">
+                            <h1 className="text-center my-2">{user.displayName}</h1>
+
+
+                        </ul>
+                    </div> 
+                </div>: <Link to={'/login'}><button className="btn mr-5">Login</button></Link>
              
             }
                   

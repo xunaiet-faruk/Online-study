@@ -1,10 +1,10 @@
-
+import { motion } from 'framer-motion'
 const Feathers = () => {
     return (
         
-    <div className="container mx-auto">
+        <div  className="container mx-auto">
             <h1 className="text-5xl text-center font-bold italic mt-20 mb-10">All <span className="text-red-500">Features </span> </h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mb-20 ml-4 md:ml-0 lg:ml-0 ">
+            <motion.div initial={{ y: -150 }} animate={{ y: 0 }} transition={{ duration: "2", delay: "1" }} className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mb-20 ml-4 md:ml-0 lg:ml-0 ">
                 <div className="card  bg-base-100 shadow-xl ">
                     <figure className="px-10 pt-10">
                         <img src={'https://i.ibb.co/PtWcfC5/image.png'} alt="Shoes" className="rounded-xl" />
@@ -91,7 +91,7 @@ const Feathers = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
     </div>
     );
 };
