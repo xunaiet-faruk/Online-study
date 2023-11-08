@@ -60,7 +60,7 @@ const Submit = () => {
                             <th>Email&name</th>
                             <th>Status</th>
                             <th>Feedback </th>
-                            <th>Delete </th>
+                          
                         </tr>
                     </thead>
                     <tbody>

@@ -42,10 +42,7 @@ const Assinmnettable = ({ item, handledelete, singledelete, setSingledelete }) =
                
        
             </th>
-            <td>
-               
-
-            </td>
+           
         </tr>
     );
 };
