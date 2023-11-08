@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/update/:id',
-        element: <Update></Update>,
+        element: <Privateroute><Update></Update></Privateroute>,
         loader: ({ params }) => fetch(`https://onlice-course-backend.vercel.app/create/${params.id}`)
 
       },

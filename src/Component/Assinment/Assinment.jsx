@@ -70,7 +70,7 @@ const pages =[...new Array(totalcont).fill(0)]
             </div>
             <div className="text-center flex gap-10 justify-center ">
                 {
-                    pages.map((item, index) => <button key={index} className={`w-8  mt-12 mb-12 h-8 ${page === index ? " bg-orange-300 text-white" : "text - white" }  rounded-full`} onClick={() => setpage(index)}>{index + 1}</button>
+                    pages.map((item, index) => <button key={index} className={`w-8  mt-12 mb-12 h-8 ${page === index ? " bg-black text-white" : "text - white" }  rounded-full`} onClick={() => setpage(index)}>{index + 1}</button>
                 )
                 }
             

@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 
 
 const Fotter = () => {
@@ -5,10 +6,46 @@ const Fotter = () => {
         <div>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                 <nav className="grid grid-flow-col gap-4">
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                   <NavLink
+                        to="/"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-red-500" : ""
+                        }
+                    >
+                        Home
+                    </NavLink>
+                  <NavLink
+                        to="/assignments"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-red-500" : ""
+                        }
+                    >
+                        Assignments
+                    </NavLink>
+                <NavLink
+                        to="/create"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-red-500" : ""
+                        }
+                    >
+                        Create assignments
+                    </NavLink>
+                    <NavLink
+                        to="/submitted"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-red-500" : ""
+                        }
+                    >
+                        Submitted Assignments
+                    </NavLink>
+                    <NavLink
+                        to="/myassinment"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-red-500" : ""
+                        }
+                    >
+                        My Assignments
+                    </NavLink>
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
@@ -18,7 +55,7 @@ const Fotter = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2023 - All right reserved by Online Study Groupe Ltd</p>
                 </aside>
             </footer>
         </div>

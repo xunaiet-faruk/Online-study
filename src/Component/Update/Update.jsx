@@ -52,12 +52,12 @@ const Update = () => {
                 <div className="flex lg:flex-row flex-col justify-center gap-5">
                     <div className="form-control lg:w-1/3 mb-6">
                         <label className="input-group">
-                            <input type="text" placeholder="Title" defaultValue={updateData?.title} name="title" className="input bg-gray-100 input-bordered w-full" />
+                            <input type="text" placeholder="Title" defaultValue={updateData?.title} name="title" className="input bg-gray-100 input-bordered w-full" required/>
                         </label>
                     </div>
                     <div className="form-control lg:w-1/3">
                         <label className="input-group">
-                            <input type="text" placeholder="Marks" defaultValue={updateData?.marks} name="marks" className="input bg-gray-100  input-bordered w-full" />
+                            <input type="text" placeholder="Marks" defaultValue={updateData?.marks} name="marks" className="input bg-gray-100  input-bordered w-full" required/>
                         </label>
                     </div>
                 </div>
@@ -65,12 +65,12 @@ const Update = () => {
 
                     <div className="form-control lg:w-1/3 mt-9 lg:mt-0">
                         <label className="input-group">
-                            <input type="url" placeholder="Image URL" defaultValue={updateData?.image} name="image" className="input bg-gray-100 input-bordered w-full" />
+                            <input type="url" placeholder="Image URL" defaultValue={updateData?.image} name="image" className="input bg-gray-100 input-bordered w-full" required/>
                         </label>
                     </div>
                     <div className="form-control lg:w-1/3 mt-5 lg:mt-0">
                         <label className="input-group w-full ">
-                            <DatePicker className="lg:px-[123px] md:px-[270px] px-24 px- py-3 border bg-gray-100 rounded-r-lg" defaultValue={updateData.datepiker} name="datepiker" selected={startDate} onChange={(date) => setStartDate(date)} />
+                            <DatePicker className="lg:px-[123px] md:px-[270px] px-24 px- py-3 border bg-gray-100 rounded-r-lg" defaultValue={updateData.datepiker} name="datepiker" selected={startDate} onChange={(date) => setStartDate(date)} required/>
                         </label>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ const Update = () => {
                     <div className="form-control w-2/3  mt-6 mr-5">
                         <label className="input-group ">
 
-                            <textarea name="description" defaultValue={updateData?.description} placeholder="Description" id="" cols="30" rows="10" className="w-full bg-gray-100 border"></textarea>
+                            <textarea name="description" defaultValue={updateData?.description} placeholder="Description" id="" cols="30" rows="10" className="w-full bg-gray-100 border" required></textarea>
                         </label>
                     </div>
 
