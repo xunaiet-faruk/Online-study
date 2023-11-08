@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Authcontext } from "../../Auth/Authprovider";
-import DatePicker from "react-datepicker" 
+import DatePicker from "react-datepicker"
 import Useaxios from "../../Auth/Useaxios";
 import Swal from "sweetalert2";
 
@@ -10,7 +10,7 @@ const Update = () => {
     const [startDate, setStartDate] = useState(new Date());
     const axios = Useaxios()
 
-    const updateData =useLoaderData()
+    const updateData = useLoaderData()
     const { _id, title, marks, image,
         difficulty } = updateData;
     const handleupdate = e => {
@@ -21,27 +21,27 @@ const Update = () => {
         const datepiker = e.target.datepiker.value;
         const difficult = e.target.difficult.value;
         const description = e.target.description.value;
-        const Allupdatedata = { title, marks, image, email:user?.email, datepiker, difficult, description }
+        const Allupdatedata = { title, marks, image, email: user?.email, datepiker, difficult, description }
         console.log(Allupdatedata)
 
 
-        fetch(`http://localhost:5000/create/${_id}`,{
-            method:'PATCH',
-            headers:{
-                'content-type':'application/json'
+        fetch(`https://onlice-course-backend.vercel.app/create/${_id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(Allupdatedata)
+            body: JSON.stringify(Allupdatedata)
         })
-        .then(res =>res.json())
-        .then(data => {
-            if(data.modifiedCount){
-                Swal.fire({
-                    title: "Good job!",
-                    text: "You data is update successfully",
-                    icon: "success"
-                });
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "You data is update successfully",
+                        icon: "success"
+                    });
+                }
+            })
 
     }
     return (

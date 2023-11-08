@@ -7,12 +7,12 @@ import { Authcontext } from "../Auth/Authprovider";
 
 
 const Submit = () => {
-    const Assinment =useLoaderData()
+    const Assinment = useLoaderData()
 
     // const [submited, setSubmited] = useState(Assinment)
     // const {user} =useContext(Authcontext)
-    const [singledelete,setSingledelete]=useState(Assinment)
-    console.log(singledelete,Assinment);
+    const [singledelete, setSingledelete] = useState(Assinment)
+    console.log(singledelete, Assinment);
     // const handledelete = id => {
     //     Swal.fire({
     //         title: "Are you sure?",
@@ -25,7 +25,7 @@ const Submit = () => {
     //     }).then((result) => {
     //         if (result.isConfirmed) {
 
-    //             fetch(`http://localhost:5000/fromassinmetns/${id}`,{
+    //             fetch(`https://onlice-course-backend.vercel.app/fromassinmetns/${id}`,{
     //                 method: 'DELETE',
     //                 headers:{
     //                     'Content-type': 'application/json'
@@ -55,31 +55,31 @@ const Submit = () => {
                     {/* head */}
                     <thead className="bg-gray-100">
                         <tr>
-                            
+
                             <th>Name</th>
                             <th>Email&name</th>
                             <th>Status</th>
                             <th>Feedback </th>
-                          
+
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                  
-                 {/* {
+
+                        {/* {
                             submited?.map((card, idx) => <Assinmnettable key={idx} handledelete={handledelete} card={card} setSingledelete={setSingledelete} singledelete={singledelete}></Assinmnettable>)
                  }
                      */}
-                     {
+                        {
                             singledelete.map(item => <Assinmnettable key={item._id} item={item} setSingledelete={setSingledelete} singledelete={singledelete}></Assinmnettable>)
-                     }
-                     
+                        }
+
                     </tbody>
-                    
+
 
                 </table>
             </div>
-            
+
         </div>
     );
 };

@@ -120,7 +120,7 @@ const Register = () => {
                     }
                 </div>
                 <div className="text-center">
-                    <button onClick={handlegoogle} className="btn btn-outline px-52 mb-2 rounded-b-xl boreder  text-md hover:bg-error mt-4 font-semibold">
+                    <button onClick={handlegoogle} className="btn btn-outline lg:px-52 mb-2 rounded-b-xl boreder  text-md hover:bg-error mt-4 font-semibold">
                         <FcGoogle className="text-2xl ml-2"> </FcGoogle>   Google
                     </button>
                 </div>

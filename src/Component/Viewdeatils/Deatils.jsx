@@ -73,7 +73,7 @@ const Deatils = () => {
                             </form>
                             <form onSubmit={hadleform}>
                                 <label className="input-group">
-                                    <input type="links" placeholder="pdf file" name="pdf" className="input mt-5 bg-gray-100 input-bordered w-full" />
+                                    <input type="file" placeholder="pdf file" name="pdf" className="input mt-5  bg-gray-100 input-bordered w-full" />
                                 </label>
                                 <textarea name="note" placeholder="textarea" id="" cols="10" rows="5" className="w-full mt-5 bg-gray-100 border-2"></textarea>
                                 <div>

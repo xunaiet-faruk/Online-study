@@ -86,12 +86,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end -mt-4 ml-28">
-                { user?.email ? <div className="flex justify-center items-center font-bold">
-                    <button className="btn btn-neutral" onClick={handlelogout}>logout</button>
-                    <div className="dropdown dropdown-hover">
+                { user?.email ? <div className="flex justify-center items-center">
+                    <button className="btn btn-neutral mt-2" onClick={handlelogout}>logout</button>
+                    <div className="dropdown dropdown-hover ">
                         <label tabIndex={0} className="btn btn-ghost rounded-btn"><img className="w-[80px] rounded-full" src={user.photoURL} alt="" /></label>
-                        <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-blue-100 rounded-box w-28 mt-4">
-                            <h1 className="text-center my-2">{user.displayName}</h1>
+                        <ul tabIndex={0} className="menu dropdown-content z-[1] lg:p-2 shadow bg-blue-100 rounded-box w-14 lg:w-28 mt-4">
+                            <h1 className="text-center lg:my-2 lg:mr-0 mr-12">{user.displayName}</h1>
 
 
                         </ul>

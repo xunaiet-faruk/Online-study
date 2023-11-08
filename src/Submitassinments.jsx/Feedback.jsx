@@ -1,37 +1,37 @@
 import { useLoaderData, useParams } from "react-router-dom";
 
 const Feedback = () => {
-    const Loaderdata =useLoaderData()
+    const Loaderdata = useLoaderData()
     console.log(Loaderdata)
-    const {id }=useParams()
+    const { id } = useParams()
     console.log(id)
 
-   const handlecompirm =e =>{
+    const handlecompirm = e => {
         e.preventDefault()
-       
-       const obtainmarks = e.target.obtainmarks.value;
+
+        const obtainmarks = e.target.obtainmarks.value;
         const details = e.target.details.value;
-       const status ="Confirmed"
-       const submitfrom = { obtainmarks, details , status}
+        const status = "Confirmed"
+        const submitfrom = { obtainmarks, details, status }
         console.log(submitfrom)
-        fetch(`http://localhost:5000/fromassinmetns/${id}`,{
-            method:'PATCH',
-            headers:{
-                'Content-type':'application/json'
+        fetch(`https://onlice-course-backend.vercel.app/fromassinmetns/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-type': 'application/json'
             },
-            body:JSON.stringify(submitfrom)
+            body: JSON.stringify(submitfrom)
         })
-        .then(res =>res.json())
-        .then(data => console.log(data))
+            .then(res => res.json())
+            .then(data => console.log(data))
     }
     return (
-       
-           
-          <div>
+
+
+        <div>
             <p className="text-center mt-8">Pdf links ={Loaderdata.pdf}</p>
             <p className="text-center">Quike notes = {Loaderdata.note}</p>
             <div className="flex justify-center items-center mt-16">
-              
+
 
                 <form onSubmit={handlecompirm}>
 
@@ -50,8 +50,8 @@ const Feedback = () => {
 
                 </form>
             </div>
-          </div>
-    
+        </div>
+
     );
 };
 

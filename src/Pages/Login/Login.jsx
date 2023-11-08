@@ -82,7 +82,7 @@ const Login = () => {
                 </p>
                 <div className="text-center">
                     <p className="font-semibold">Or</p>
-                    <button onClick={handlegoogle} className="btn btn-outline px-44 mb-2 rounded-b-xl boreder  text-md hover:bg-error mt-4 font-semibold">
+                    <button onClick={handlegoogle} className="btn btn-outline lg:px-44 mb-2 rounded-b-xl boreder  text-md hover:bg-error mt-4 font-semibold">
                         <FcGoogle className="text-2xl ml-2"> </FcGoogle>   Google
                     </button>
                 </div>

@@ -33,23 +33,23 @@ const Authprovider = ({ children }) => {
     useEffect(() => {
 
         const unsubscribe = onAuthStateChanged(auth, currenuser => {
-            const userEmail =currenuser?.email || user?.email
+            const userEmail = currenuser?.email || user?.email
             const logedEmail = { email: userEmail }
-     
+
             setloading(false)
             setStay(currenuser)
-            if(currenuser){
-                axios.post('http://localhost:5000/jwt',logedEmail,{withCredentials:true})
-                .then(res =>{
-                    console.log("token response",res.data)
-                })
-            }else{
-                axios.post('http://localhost:5000/logout',logedEmail,{withCredentials:true})
-                .then(res =>{
-                    console.log(res.data);
-                })
+            if (currenuser) {
+                axios.post('https://onlice-course-backend.vercel.app/jwt', logedEmail, { withCredentials: true })
+                    .then(res => {
+                        console.log("token response", res.data)
+                    })
+            } else {
+                axios.post('https://onlice-course-backend.vercel.app/logout', logedEmail, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                    })
             }
-          
+
         })
         return () => {
             unsubscribe();

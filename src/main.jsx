@@ -30,56 +30,56 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Mainroute></Mainroute>,
-    errorElement:<Error></Error>,
-    children:[
+    errorElement: <Error></Error>,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: '/login',
+        element: <Login></Login>
       },
       {
-        path:'/register',
-        element:<Register></Register>
+        path: '/register',
+        element: <Register></Register>
       },
       {
-        path:'/assignments',
-        element:<Assinment></Assinment>,
-         loader: () => fetch('http://localhost:5000/create')
+        path: '/assignments',
+        element: <Assinment></Assinment>,
+        loader: () => fetch('https://onlice-course-backend.vercel.app/create')
       },
       {
-        path:'/create',
+        path: '/create',
         element: <Privateroute><Createassinment></Createassinment></Privateroute>
       },
       {
-        path:'/details/:id',
-        element:<Privateroute><Deatils></Deatils></Privateroute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/create/${params.id}`)
+        path: '/details/:id',
+        element: <Privateroute><Deatils></Deatils></Privateroute>,
+        loader: ({ params }) => fetch(`https://onlice-course-backend.vercel.app/create/${params.id}`)
       },
       {
-        path:'/update/:id',
-        element:<Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/create/${params.id}`)
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({ params }) => fetch(`https://onlice-course-backend.vercel.app/create/${params.id}`)
 
       },
       {
-        path:'/submitted',
+        path: '/submitted',
         element: <Privateroute><Submit></Submit></Privateroute>,
-        loader: () => fetch('http://localhost:5000/fromassinmetns',{credentials:'include'})
-     
+        loader: () => fetch('https://onlice-course-backend.vercel.app/fromassinmetns', { credentials: 'include' })
+
       },
       {
-        path:'/fromassinmetns/:id',
-        element:<Privateroute><Feedback></Feedback></Privateroute>,
-        loader: ({params}) => fetch(`http://localhost:5000/fromassinmetns/${params.id}`)
+        path: '/fromassinmetns/:id',
+        element: <Privateroute><Feedback></Feedback></Privateroute>,
+        loader: ({ params }) => fetch(`https://onlice-course-backend.vercel.app/fromassinmetns/${params.id}`)
       },
       {
-        path:'/myassinment',
+        path: '/myassinment',
         element: <Privateroute><Myassinments></Myassinments></Privateroute>
       }
-      
+
     ]
   },
 ]);
@@ -87,12 +87,12 @@ const router = createBrowserRouter([
 const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  
+
     <QueryClientProvider client={queryClient}>
       <Authprovider>
         <RouterProvider router={router} />
       </Authprovider>
-  
+
     </QueryClientProvider>
     <Toaster></Toaster>
   </React.StrictMode>,

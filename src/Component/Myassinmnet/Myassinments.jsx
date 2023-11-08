@@ -9,12 +9,12 @@ const Myassinments = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/fromassinmetns?useremail=${user.email}`,{credentials:"include"})
+        fetch(`https://onlice-course-backend.vercel.app/fromassinmetns?useremail=${user.email}`, { credentials: "include" })
             .then(res => res.json())
             .then(data => setAssinment(data))
 
     }, [])
-   
+
 
     return (
         <div>
@@ -33,11 +33,11 @@ const Myassinments = () => {
                                 <th>Marks</th>
                                 <th>Status</th>
                                 <th>Fedback</th>
-                              
+
                             </tr>
                         </thead>
                         <tbody>
-                    
+
 
                             {
 
