@@ -21,7 +21,7 @@ const Update = () => {
         const datepiker = e.target.datepiker.value;
         const difficult = e.target.difficult.value;
         const description = e.target.description.value;
-        const Allupdatedata = { title, marks, image, datepiker, difficult, description }
+        const Allupdatedata = { title, marks, image, email:user?.email, datepiker, difficult, description }
         console.log(Allupdatedata)
 
 

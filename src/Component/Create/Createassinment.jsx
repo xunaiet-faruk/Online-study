@@ -18,7 +18,7 @@ const Createassinment = () => {
             const datepiker = e.target.datepiker.value;
             const difficult = e.target.difficult.value;
             const description = e.target.description.value;
-            const Alldata ={title,marks,image,datepiker,difficult,description}
+            const Alldata ={title,marks,image,datepiker,email:user?.email,difficult,description}
            
             axios.post('/create',Alldata)
             .then(res => {

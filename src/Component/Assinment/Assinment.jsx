@@ -9,6 +9,7 @@ const Assinment = () => {
     // const allData =useLoaderData()
     // const [assinmentdata,setAssinmnet] =useState(allData)
     const [page, setpage] = useState(0)
+    const [assignments, setAssignment] = useState([]);
     // const [dificult,setdificult] =useState("all")
 
     const axios =Useaxios()
@@ -16,10 +17,13 @@ const Assinment = () => {
 
     const Allasinment = async() =>{
         const result = await axios.get(`/create?page=${page}`)
+        console.log(result.data);
         return result;
         
 
     }
+
+    
 
     const { data: result,  postCount ,isError,error, isLoading } =useQuery({
         queryKey: ['Allasinments',page],
@@ -28,16 +32,6 @@ const Assinment = () => {
     })
     
 
-    // useEffect(() => {
-    //     if (dificult == "all") {
-    //         setAssinmnet(allData);
-    //     }
-    //     else {
-    //         const levels = allData.filter(level => level.difficulty === dificult);
-    //         console.log(levels, dificult);
-    //         setAssinmnet(levels)
-    //     }
-    // }, [allData,dificult])
 
  
     const totalcont = Math.ceil(result?.data?.postCount ? result?.data?.postCount / 5 : 0)
@@ -54,12 +48,6 @@ const pages =[...new Array(totalcont).fill(0)]
     
     
 
-    // const handleOption = e =>{
-    //     setdificult(e.target.value)
-        
-    
-        
-    // }
 
 
 
